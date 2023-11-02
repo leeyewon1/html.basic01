@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소 선택자</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* ::before은 이 박스의 첫번째 자식으로 삽입하라. */
+        .tit01::before {
+            content: "1";
+        }
+
+        /* ::after는 이 박스의 마지막 자식으로 삽입하라. */
+        .tit01::after {
+            content: "2";
+        }
+
+        .tit02::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 1px;
+            background: #f00;
+            margin: 10px auto 0 auto;
+        }
+
+        .tit03 {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            width: 100%;
+        }
+
+        .tit03::before {
+            content: "";
+            display: block;
+            height: 1px;
+            background: #f00;
+            flex: 1;
+        }
+
+        .tit03::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background: #f00;
+            flex: 1;
+        }
+
+        .tit04 {
+            position: relative;
+        }
+
+        .tit04::before {
+            content: "";
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            width: 1px;
+            height: 60px;
+            background: #f00;
+        }
+
+        .dot_list li {
+            position: relative;
+            padding: 0 0 0 20px;
+        }
+
+        .dot_list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background: #f00;
+        }
+
+        .dot_list2 li {
+            position: relative;
+            padding: 0 0 0 20px;
+        }
+
+        .dot_list2 li::before {
+            content: "\e907";
+            font-family: xeicon;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="tit01">Lorem ipsum dolor sit.</h2>
+    <h2 class="tit02">Lorem ipsum dolor sit.</h2>
+    <h2 class="tit03">Lorem ipsum dolor sit.</h2>
+    <h2 class="tit04">Lorem ipsum dolor sit.</h2>
+
+    <ul class="dot_list">
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur harum corporis nemo ullam consequuntur
+            facere esse. Modi adipisci quasi facilis.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur harum corporis nemo ullam consequuntur
+            facere esse. Modi adipisci quasi facilis.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur harum corporis nemo ullam consequuntur
+            facere esse. Modi adipisci quasi facilis.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur harum corporis nemo ullam consequuntur
+            facere esse. Modi adipisci quasi facilis.</li>
+        </li>
+    </ul>
+
+    <ul class="dot_list2">
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+    </ul>
+</body>
+
+</html>

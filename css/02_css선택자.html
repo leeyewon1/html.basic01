@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 선택자</title>
+    <style>
+        /* div, section 박스에는 무조건 class로 이름을 붙인다. */
+        /* div, section이 선택자가 되지 않게 한다. */
+
+        /* 각 유형의 선택자는 계급을 가지고 그 계급을 넘어설 수 없다.
+        id: 100점, class: 10점, tag: 1점 
+        */
+
+        /* tag selector */
+        div {
+            color: #f00;
+        }
+
+        /* id selector */
+        #box {
+            color: #ff0;
+        }
+
+        /* class selector */
+        .box {
+            color: #369;
+        }
+
+        /* 전체선택자
+        : reset,
+        : 자식들의 tag가 다를 때 전체 자식의 선택 */
+        * {
+            font-size: 30px;
+        }
+
+        /* 자식선택자: 바로 아래의 자식만 선택한다.(후손 아님)
+        : 드롭다운 메뉴 만들시 등, 국한된 용도에 사용한다. (같은 tag가 하위에 중첩될 때, 하위tag를 제외해야할 때)
+         */
+        .mbox>* {
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        /* 하위선택자 (후손선택자) : 자식을 비롯한 아래 레벨의 모든 것을 선택한다. */
+        .mbox * {
+            color: #ff0;
+            font-size: 40px;
+        }
+
+        /* 그룹선택자 */
+        .mbox h2,
+        .mbox p,
+        .mbox div,
+        .mbox figure {
+            font-size: 18px;
+        }
+
+        .mbox h2:nth-child(1) {}
+
+        .mbox p:nth-child(2) {}
+
+        .mbox h2:nth-of-type(1) {}
+
+        .mbox p:nth-of-type(1) {}
+
+        /* 형제 선택자 : 뒤 형제들 선택*/
+        .mbox h2~p {}
+
+        .mbox h2~figure {}
+
+        /* 인접형제선택자 : 바로 뒤 형제만 선택 */
+        .mbox h2+p {}
+
+        /* 종속선택자 */
+        #box.box {}
+    </style>
+</head>
+
+<body>
+    <div>tag selector</div>
+    <div id="box">id selector</div>
+    <div class="box">class selector</div>
+
+    <p>Lorem ipsum dolor sit.</p>
+
+    <section class="mbox">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit.</p>
+        <div class="box">Lorem ipsum dolor sit.</div>
+        <figure>Lorem ipsum dolor sit.</figure>
+    </section>
+</body>
+
+</html>

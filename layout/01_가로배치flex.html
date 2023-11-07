@@ -25,28 +25,26 @@
     <style>
         .header {
             margin: 0 0 100px 0;
-            background: #cecccc;
+            background: #f9f9f9;
             line-height: 100px;
         }
 
         .h01 {
-            /* 자식 박스들의 가로 배치 */
+            /* 자식 박스들의 가로배치 */
             display: flex;
             justify-content: flex-start;
-
         }
 
         .h02 {
             display: flex;
             /* 가로 배치된 박스의 위치를 가운데로 오게 함 */
             justify-content: center;
-
         }
 
         .h03 {
             display: flex;
-            /* 가로 배치된 박스의 위치를 오른쪽으로 오게 함 */
-            justify-content: flex-end;
+            /* 가로 배치된 박스의 위치를 오른쪽으로 */
+            justify-content: flex-end
         }
 
         .h04 {
@@ -56,11 +54,10 @@
 
         .h05 {
             display: flex;
-
         }
 
         .h05 nav {
-            /* flex된 박스의 왼쪽 마진을 최대한으로 줘서 오른쪽으로 밀어낸다. */
+            /* flex된 박스의 왼쪽 마진을 최대한 줘서 오른쪽으로 밀어냄 */
             margin: 0 0 0 auto;
         }
 
@@ -74,7 +71,6 @@
 
         .h06 .inner .left {
             display: flex;
-
         }
 
         .h06 .inner .right {
@@ -107,7 +103,6 @@
 
         .tang2 h1 {
             width: 190px;
-
         }
 
         .tang2 .util {
@@ -117,7 +112,6 @@
 
         .tang3 {
             position: relative;
-            text-align: center;
         }
 
         .tang3 h1 {
@@ -126,21 +120,21 @@
             top: 0;
         }
 
-        .tang3 .util {
-            position: absolute;
-            right: 80px;
-            top: 0;
-        }
-
         .tang3 .gnb {
-            width: inline-flex;
+            width: 1000px;
             margin: 0 auto;
-            display: inline-block;
         }
 
         .tang3 .gnb>ul {
             display: flex;
+            justify-content: center;
             gap: 40px;
+        }
+
+        .tang3 .util {
+            position: absolute;
+            right: 80px;
+            top: 0;
         }
 
         .tang4 {
@@ -148,13 +142,8 @@
             padding: 0 80px;
         }
 
-        .tang4 .utill {
-            margin: 0 0 0 200px;
-        }
-
         .tang4 .gnb {
             margin: 0 0 0 auto;
-
         }
 
         .tang4 .gnb>ul {
@@ -162,41 +151,46 @@
             gap: 40px;
         }
 
+        .tang4 .util {
+            margin: 0 0 0 200px;
+        }
+
         .tang5 {
-            position: absolute;
-            padding: 0 80px;
-            justify-content: space-between;
+            position: relative;
             display: flex;
+            justify-content: space-between;
+            padding: 0 80px;
         }
 
         .tang5 h1 {
             position: absolute;
             top: 0;
+            left: 50%;
             transform: translate(-50%, 0);
         }
 
-        .tang5 .gnb>ul {
+        .tang5>.gnb>ul {
             display: flex;
             gap: 40px;
         }
 
         .tang6 {
-            display: flex;
             position: relative;
+            display: flex;
             justify-content: space-between;
             padding: 0 80px;
-        }
-
-        .tang6 .gnb>ul {
-            display: flex;
-            gap: 40px;
         }
 
         .tang6 .gnb {
             position: absolute;
             top: 0;
             left: 50%;
-            transform: translate(-50, 0);
+            transform: translate(-50%, 0);
+        }
+
+        .tang6 .gnb>ul {
+            display: flex;
+            gap: 40px;
         }
     </style>
 </head>
@@ -247,7 +241,7 @@
     <hr />
 
     <header class="header tang">
-        <h1>탕후루 ROGO</h1>
+        <h1>탕후루 LOGO</h1>
         <nav class="gnb">
             <ul>
                 <li><a href="">menu01</a></li>
@@ -273,7 +267,7 @@
 
             </ul>
         </nav>
-        <div class="utill">
+        <div class="util">
             icon
         </div>
 
@@ -289,7 +283,7 @@
 
             </ul>
         </nav>
-        <div class="utill">
+        <div class="util">
             icon
         </div>
 
@@ -305,7 +299,7 @@
 
             </ul>
         </nav>
-        <div class="utill">
+        <div class="util">
             icon
         </div>
 
@@ -321,7 +315,7 @@
 
             </ul>
         </nav>
-        <div class="utill">
+        <div class="util">
             icon
         </div>
 
@@ -337,7 +331,7 @@
 
             </ul>
         </nav>
-        <div class="utill">
+        <div class="util">
             icon
         </div>
 

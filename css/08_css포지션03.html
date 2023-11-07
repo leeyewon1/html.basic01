@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        img {
+            vertical-align: middle;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .basic_hover01 {
+            padding: 120px 0;
+        }
+
+        .basic_hover01 .inner {
+            display: flex;
+            gap: 30px;
+        }
+
+        .basic_hover01 .itm {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .basic_hover01 .itm .desc {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.3);
+            transition: 0.5s;
+            transform: translate(0, 100%);
+
+
+        }
+
+        .basic_hover01 .itm .desc a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff
+        }
+
+        .basic_hover01 .itm:hover .desc {
+            transform: translate(0, 0);
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="basic_hover01">
+        <div class="inner">
+            <div class="itm">
+                <figure>
+                    <img src="../imeges/lesedilarona01.jpg" alt="">
+                </figure>
+                <div class="desc">
+                    <a href="">더보기</a>
+                </div>
+            </div>
+            <div class="itm">
+                <figure>
+                    <img src="../imeges/lesedilarona01.jpg" alt="">
+                </figure>
+                <div class="desc">
+                    <a href="">더보기</a>
+                </div>
+            </div>
+            <div class="itm">
+                <figure>
+                    <img src="../imeges/lesedilarona01.jpg" alt="">
+                </figure>
+                <div class="desc">
+                    <a href="">더보기</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

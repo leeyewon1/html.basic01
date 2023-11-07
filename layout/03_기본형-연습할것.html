@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운메뉴 기본형_Y.W</title>
+    <link rel="stylesheet" href="../asset/reset.css">
+    <link rel="stylesheet" href="../asset/font.css">
+    <link rel="stylesheet" href="../asset/slick.css">
+
+    <style>
+        * {
+            /* outline: 1px solid tomato; */
+        }
+
+        .wrap {}
+
+        header {
+            line-height: 80px;
+        }
+
+        .header h1 {
+            font-size: 0;
+        }
+
+        .header .header_wrap {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .header .gnb {
+            margin: 0 0 0 auto;
+
+        }
+
+        .header .search {
+            margin: 0 0 0 80px;
+        }
+
+
+        .header .gnb>ul {
+            display: flex;
+            gap: 60px;
+        }
+
+        .visual_slide .itm {
+            height: 700px;
+        }
+
+        .visual_slide .itm01 {
+            background: url(../imeges/mainvisual01.jpg)no-repeat center center/cover;
+        }
+
+        .visual_slide .itm02 {
+            background: url(../imeges/mainvisual02.jpg)no-repeat center center/cover;
+        }
+
+        .visual_slide .itm03 {
+            background: url(../imeges/mainvisual03.jpg)no-repeat center center/cover;
+        }
+
+        .main_content {
+            padding: 100px 0;
+        }
+
+        .main_content .title {
+            max-width: 1200px;
+            margin: 0 auto 24px auto;
+            padding: 0 15px;
+        }
+
+        .main_content .title h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+        }
+
+        .main_content .title p {
+            font-size: 16px;
+        }
+
+        .main_content .inner {
+            display: flex;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .main_content .inner .img_box {
+            margin: 0 0 16px 0;
+        }
+
+        .main_content .inner strong {
+            display: block;
+            margin: 0 0 16px 0;
+        }
+
+        .main_content .inner a {
+            display: inline-block;
+            padding: 4px 16px 8px 16px;
+            background: #333;
+            color: #FFF;
+        }
+
+        .footer {
+            border-top: 1px solid#ddd;
+            padding: 40px 0;
+            text-align: center;
+        }
+    </style>
+
+    <script src="../asset/jquery-1.12.4.min.js"></script>
+    <script src="../asset/slick.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="header_wrap">
+                <h1>
+                    <a href="/">
+                        <img src="../imeges/grafflogo.png" alt="">
+                    </a>
+                </h1>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="">하이쥬얼리</a></li>
+                        <li><a href="">쥬얼리 컬렉션</a></li>
+                        <li><a href="">컬렉션 &amp; 브라이덜</a></li>
+                        <li><a href="">웨딩쥬얼리</a></li>
+                        <li><a href="">특별한 솔리테어</a></li>
+
+                    </ul>
+                </nav>
+                <div class="search">
+                    <i class="xi-search"></i>
+                </div>
+            </div>
+
+        </header>
+        <main class="main">
+            <section class="main_visual">
+                <div class="visual_slide">
+                    <div class="itm itm01">01</div>
+                    <div class="itm itm02">02</div>
+                    <div class="itm itm03">03</div>
+                </div>
+            </section>
+
+            <section class="main_content">
+                <div class="title">
+                    <h2>JEWELLERY COLLECTION EVENT</h2>
+                    <p>모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷,
+                        스톤 그리고 색상들을 멋진 조합으로 선사합니다.</p>
+                </div>
+                <div class="inner">
+                    <figure>
+                        <div class="img_box">
+                            <img src="../imeges/lesedilarona01.jpg" alt="">
+                        </div>
+                        <strong>JEWELLERY</strong>
+                        <a href="">more</a>
+
+                    </figure>
+                    <figure>
+                        <div class="img_box">
+                            <img src="../imeges/lesedilarona02.jpg" alt="">
+                        </div>
+                        <strong>JEWELLERY</strong>
+                        <a href="">more</a>
+
+                    </figure>
+                    <figure>
+                        <div class="img_box">
+                            <img src="../imeges/lesedilarona03.jpg" alt="">
+                        </div>
+                        <strong>JEWELLERY</strong>
+                        <a href="">more</a>
+
+                    </figure>
+
+                </div>
+
+            </section>
+        </main>
+        <footer class="footer">
+            &copy; y.w
+
+        </footer>
+    </div>
+
+    <script>
+        $(function () {
+            $('.visual_slide').slick({
+                arrows: false,
+                autoplay: true,
+                pauseOnHover: false,
+
+            });
+
+        });
+
+
+    </script>
+</body>
+
+</html>

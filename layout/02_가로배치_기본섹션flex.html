@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로배치_기본섹션flex</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: inherit;
+        font-weight: inherit;
+
+    }
+
+    ul,
+    ol {
+        list-style: none;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    img {
+        vertical-align: middle;
+        max-width: 100%;
+    }
+
+    .title {
+        max-width: 1200px;
+        margin: 0 auto 32px auto;
+        padding: 0 15px;
+    }
+
+    .title h2 {
+        font-size: 32px;
+        font-weight: bold;
+        margin: 0 0 24px 0;
+    }
+
+    .inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    #basic01 {
+        padding: 120px 0;
+        background: #f9f9f9;
+    }
+
+    #basic01 .inner {
+        display: flex;
+        gap: 30px
+    }
+
+    #basic01 .itm {
+        flex: 1;
+        background: tomato;
+    }
+
+    #basic02 {
+        padding: 120px 0;
+    }
+
+    #basic02 .inner {
+        display: flex;
+    }
+
+    #basic02 .itm {
+        flex: 1;
+        gap: 30px;
+    }
+
+    #basic03 {
+        padding: 120px;
+        background: #f9f9f9;
+    }
+
+    #basic03 .inner {
+        display: flex;
+    }
+
+    #basic03 .itm {
+        flex: 1;
+    }
+
+    #basic03 .itm figure {
+        margin: 0 0 24px 0;
+    }
+
+    #basic03 .itm strong {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 0 16px 0;
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <header id="header">
+            <h1>Logo</h1>
+        </header>
+        <main id="main">
+            <section id="basic01">
+                <div class="title">
+                    <h2>기본섹션</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, incidunt!</p>
+                </div>
+                <div class="inner">
+                    <div class="itm">A</div>
+                    <div class="itm">B</div>
+                    <div class="itm">C</div>
+                </div>
+            </section>
+            <section id="basic02">
+                <div class="title">
+                    <h2>기본섹션</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, incidunt!</p>
+                </div>
+                <div class="inner">
+                    <div class="itm">
+                        <img src="../imeges/lesedilarona01.jpg" alt="">
+                    </div>
+                    <div class="itm">
+                        <img src="../imeges/lesedilarona01.jpg" alt="">
+                    </div>
+                    <div class="itm">
+                        <img src="../imeges/grafflogo.png" alt="">
+                    </div>
+
+                </div>
+            </section>
+            <section id="basic03">
+                <div class="title">
+                    <h2>기본섹션</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, incidunt!</p>
+                </div>
+                <div class="inner">
+                    <div class="itm">
+                        <figure>
+                            <img src="../imeges/lesedilarona01.jpg" alt="">
+                        </figure>
+                        <figcaption>
+                            <strong>small title </strong>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, unde.</p>
+                        </figcaption>
+                    </div>
+                    <div class="itm">
+                        <figure>
+                            <img src="../imeges/lesedilarona01.jpg" alt="">
+                        </figure>
+                        <figcaption>
+                            <strong>small title </strong>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, unde.</p>
+                        </figcaption>
+                    </div>
+                    <div class="itm">
+                        <figure>
+                            <img src="../imeges/lesedilarona01.jpg" alt="">
+                        </figure>
+                        <figcaption>
+                            <strong>small title </strong>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, unde.</p>
+                        </figcaption>
+                    </div>
+                    <div class="itm">
+                        <figure>
+                            <img src="../imeges/lesedilarona01.jpg" alt="">
+                        </figure>
+                        <figcaption>
+                            <strong>small title </strong>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, unde.</p>
+                        </figcaption>
+                    </div>
+                    <div class="itm">
+                        <figure>
+                            <img src="../imeges/lesedilarona01.jpg" alt="">
+                        </figure>
+                        <figcaption>
+                            <strong>small title </strong>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, unde.</p>
+                        </figcaption>
+                    </div>
+                </div>
+    </div>
+    </section>
+    </main>
+    <footer id="footer">
+        &copy; y.w
+    </footer>
+    </div>
+
+</body>
+
+</html>

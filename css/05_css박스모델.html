@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .in01 {
+            background: rgb(0, 200, 255);
+            width: 1000px;
+            height: 1000px;
+            margin: 100px;
+            padding: 100px;
+        }
+
+        .b01 {
+            background: #369;
+
+        }
+
+
+        .b02 {
+            background: rgb(75, 137, 199);
+            width: 1200px;
+            margin: 100px;
+            padding: 100px;
+            line-height: 1;
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 대표적인 inline tag :
+    : width , height 값을 줄 수 없고
+    : 좌우 마진과 패딩만 적용된다. -->
+
+    <span class="inline in01">"inline"</span>
+    <strong class="inline in02">inline</strong>
+    <em class="inline in03">inline</em>
+    <a href="inline in04">inline</a>
+
+    <!-- box : w , h 값을 줄 수 있고 마진 패딩이 적용된다. -->
+    <!-- box : 투명한 배경 , box옆에 box를 오지 못하게 하는 기본 속성이있다
+             : 사이즈를 주지 않을 경우 width : auto , height : auto 값을 가진다. -->
+
+    <div class="box b01">box</div>
+    <p class="box b02">box</p>
+    <h2 class="box b03">box</h2>
+    <figure class="box b04">box</figure>
+
+
+</body>
+
+</html>
